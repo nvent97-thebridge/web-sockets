@@ -4,6 +4,9 @@ const btnSend = document.getElementById("btnSend");
 const inputMessage = document.getElementById("inputMessage");
 const listMessages = document.getElementById("listMessages");
 
+const username = prompt("Ingrese tu usuario");
+socket.emit("set-username", username)
+
 const sendMessage = () => {
   const message = inputMessage.value;
   socket.emit("mensaje", message);
